@@ -9,7 +9,7 @@ from contextlib import contextmanager
 
 
 class OpenFile:
-    def __init__(self, filename, mode, filename2, txt):
+    def __init__(self, filename, mode, filename2):
         self.filename = filename
         self.mode = mode
         self.name2 = filename2

@@ -2,6 +2,7 @@
 1 створити контекст менеджер, якому можна передати ім'я файла i вміст. На вході він його створить з вмістом
 Завдання зробити через клас та через генератор
 '''
+from importlib.metadata import files
 import os
 from contextlib import contextmanager
 
@@ -18,6 +19,11 @@ class OpenFile:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.file.close()
+
+    def main_file(self):
+        q = 'C:lesson 31'
+        for dirs, folder, files in os.walk(q):
+            a = files
 
 
 @contextmanager
